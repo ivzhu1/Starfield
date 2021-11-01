@@ -39,7 +39,6 @@ void draw() {
   }
   if (dist((float)bob[0].x, (float)bob[0].y, (float)bob[1].x, (float)bob[1].y) < .5)
     spin = false;
-  System.out.println(rate);
 }
 void mousePressed() {
   rate = 55;
