@@ -1,7 +1,7 @@
 Spinner[] bob;
 Particle[] wow;
 boolean spin = true;
-boolean trail = false;
+boolean trail = true;
 void setup() {
   size(500, 500);
   bob = new Spinner[2];
