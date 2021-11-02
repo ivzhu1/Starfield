@@ -49,14 +49,10 @@ void mousePressed() {
   spin = true;
 }
 void keyPressed() {
-  if (trail == false) {
-    fill(52, 21, 130, 30);
+  if (trail == false) 
     trail = true;
-  } else {
-    fill(52, 21, 130);
+  else 
     trail = false;
-  }
-  rect(0, 0, 500, 500);
 }
 class Spinner {
   int myColor;
