@@ -18,7 +18,7 @@ void draw() {
   if (trail == true)
     fill(52, 21, 130, 30);
   else 
-  fill(52, 21, 130);
+    fill(52, 21, 130);
   rect(0, 0, 500, 500);
   if (spin == true) {
     for (int i = 0; i < bob.length; i++) {
