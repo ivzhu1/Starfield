@@ -1,6 +1,5 @@
 Spinner[] bob;
 Particle[] wow;
-float rate = 55;
 boolean spin = true;
 boolean trail = false;
 void setup() {
@@ -13,6 +12,7 @@ void setup() {
     wow[i] = new Oddball();
   for (int i = 5; i < wow.length; i++)
     wow[i] = new Particle();
+  frameRate(160);
 }
 void draw() {
   if (trail == true)
@@ -25,12 +25,9 @@ void draw() {
       noStroke();
       bob[i].move();
       bob[i].show();
+      bob[i].angle += .01;
     }
-    rate *= 1.0045;
-    frameRate(rate);
   } else {
-    rate = 120;
-    frameRate(rate);
     for (int i = 0; i < wow.length; i++) {
       noStroke();
       wow[i].move();
@@ -41,7 +38,6 @@ void draw() {
     spin = false;
 }
 void mousePressed() {
-  rate = 55;
   fill(52, 21, 130);
   rect(0, 0, 500, 500);
   for (int i = 0; i < bob.length; i++)
@@ -76,7 +72,7 @@ class Spinner {
     x = 250 + Math.cos(angle)*dist;
     y = 250 + Math.sin(angle)*dist;
     angle = angle + 2*PI/180;
-    dist -= .08;
+    dist -= .1;
   }
   void show() {
     fill(myColor);
