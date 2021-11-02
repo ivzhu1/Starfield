@@ -12,7 +12,7 @@ void setup() {
     wow[i] = new Oddball();
   for (int i = 5; i < wow.length; i++)
     wow[i] = new Particle();
-  frameRate(160);
+  frameRate(150);
 }
 void draw() {
   if (trail == true)
