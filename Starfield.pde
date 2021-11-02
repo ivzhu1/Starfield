@@ -34,7 +34,7 @@ void draw() {
       wow[i].show();
     }
   }
-  if (dist((float)bob[0].x, (float)bob[0].y, (float)bob[1].x, (float)bob[1].y) < .5)
+  if (dist((float)bob[0].x, (float)bob[0].y, (float)bob[1].x, (float)bob[1].y) < .001)
     spin = false;
 }
 void mousePressed() {
